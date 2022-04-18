@@ -1,40 +1,738 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>What's a Python talk doing here?</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background="#20232a">
+          <div
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+              alt="React logo"
+              style="
+                height: 180px;
+                margin: 0 1rem 4rem 1rem;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+            <h1>+</h1>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+              alt="Python logo"
+              style="
+                height: 180px;
+                margin: 0 1rem 4rem 1rem;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+          </div>
+          <h2>What's a Python talk doing here?</h2>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section data-background="#20232a">
+          <section>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+              "
+            >
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQG6WZPh8qMdEg/profile-displayphoto-shrink_800_800/0/1516482530602?e=1655337600&v=beta&t=AUp3mO3UcED8rEaxJR_xoq1Kv5B7e4DWPNC1YzBSLt8"
+                alt="Linkedin image"
+                style="border-radius: 50%; height: 180px"
+                class="demo-logo"
+              />
+              <div>
+                <h2>Hello There</h2>
+                <ul>
+                  <li class="fragment">Alon Niv</li>
+                  <li class="fragment">
+                    Mad scientist on
+                    <a href="https://github.com/oakfang">Github</a>
+                  </li>
+                  <li class="fragment">
+                    A shady developer
+                    <small class="fragment"
+                      >(never trust a dev in a suit)</small
+                    >
+                  </li>
+                  <li class="fragment">FE Tech Lead @ Taboola</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div>
+              <img
+                src="https://www.taboola.com//wp-content/uploads/2020/05/logo-blue.png"
+                alt="Taboola logo"
+                style="height: 120px"
+                class="demo-logo"
+              />
+              <ul>
+                <li class="fragment">Content you may like</li>
+                <li class="fragment">We do React & Vanilla</li>
+                <li class="fragment">We're hiring!</li>
+              </ul>
+            </div>
+          </section>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <h2>On the agenda</h2>
+          <ol>
+            <li
+              class="fragment"
+              style="text-decoration: line-through; opacity: 0.7"
+            >
+              Introductions
+            </li>
+            <li class="fragment">The "problem"</li>
+            <li class="fragment">The obvious path to solution</li>
+            <li class="fragment">Python components for Fun & Profit</li>
+            <li class="fragment">Disclaimer *</li>
+          </ol>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>The "problem"</h2>
+            <p>JS isn't well-liked.</p>
+            <iframe
+              class="fragment"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/sRWE5tnaxlI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+            <iframe
+              class="fragment"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(20deg);
+              "
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Y1HXRKDDa_0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+            <iframe
+              class="fragment"
+              width="560"
+              height="315"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-50deg);
+              "
+              src="https://www.youtube.com/embed/xE8tL8NdHaY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </section>
+          <section>
+            <h2>Why, though?</h2>
+            <ul>
+              <li class="fragment">Legacy type system</li>
+              <li class="fragment">Framework fatigue</li>
+              <li class="fragment">Bizarre toolchain</li>
+              <li class="fragment">... etc.</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Possible Solutions</h2>
+            <ul data-id="solutions">
+              <li class="fragment" data-fragment-index="1">Use Typescript</li>
+              <li class="fragment" data-fragment-index="2">Use React</li>
+              <span class="fragment fade-in" data-fragment-index="3">
+                <span class="fragment fade-out" data-fragment-index="6">
+                  <img
+                    src="https://i.imgur.com/4swTVMf.png"
+                    alt="I told you so #1"
+                    class="r-frame"
+                    style="
+                      min-height: 450px;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                  />
+                </span>
+              </span>
+              <span class="fragment fade-in" data-fragment-index="4">
+                <span class="fragment fade-out" data-fragment-index="6">
+                  <img
+                    src="https://i.imgur.com/nJp0zmb.png"
+                    alt="I told you so #2"
+                    class="r-frame"
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    " /></span
+              ></span>
+              <span class="fragment fade-in" data-fragment-index="5">
+                <span class="fragment fade-out" data-fragment-index="6">
+                  <svg
+                    width="250"
+                    height="250"
+                    viewBox="0 0 250 250"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                  >
+                    <circle
+                      class="Rang"
+                      cx="125"
+                      cy="125"
+                      r="120.75"
+                      fill="none"
+                      stroke="#57b027"
+                      stroke-width="6.5"
+                      id="Rang0"
+                      layer="0"
+                    ></circle>
+                    <g
+                      font-size="32"
+                      font-style="normal"
+                      font-family="Arial"
+                      fill="#57b027"
+                      stroke="none"
+                      font-weight="bold"
+                      in="0"
+                      rad="117.5"
+                      cut="-108.5"
+                      len="234"
+                      id="RangText1"
+                      layer="1"
+                    >
+                      <text transform="translate(43.68,151.42) rotate(-99.63)">
+                        <tspan>G</tspan>
+                      </text>
+                      <text transform="translate(39.79,117.97) rotate(-82.31)">
+                        <tspan>i</tspan>
+                      </text>
+                      <text transform="translate(43.08,100.51) rotate(-69.78)">
+                        <tspan>t</tspan>
+                      </text>
+                      <text transform="translate(50.78,82.55) rotate(-53.67)">
+                        <tspan>h</tspan>
+                      </text>
+                      <text transform="translate(68.76,60.60) rotate(-34.57)">
+                        <tspan>u</tspan>
+                      </text>
+                      <text transform="translate(92.93,45.74) rotate(-15.46)">
+                        <tspan>b</tspan>
+                      </text>
+                      <text transform="translate(120.64,39.61) rotate(0.65)">
+                        <tspan></tspan>
+                      </text>
+                      <text transform="translate(140.14,40.85) rotate(17.97)">
+                        <tspan>C</tspan>
+                      </text>
+                      <text transform="translate(169.94,52.26) rotate(38.27)">
+                        <tspan>o</tspan>
+                      </text>
+                      <text transform="translate(191.27,70.97) rotate(57.37)">
+                        <tspan>p</tspan>
+                      </text>
+                      <text transform="translate(205.30,95.63) rotate(72.89)">
+                        <tspan>i</tspan>
+                      </text>
+                      <text transform="translate(209.64,112.87) rotate(84.83)">
+                        <tspan>l</tspan>
+                      </text>
+                      <text transform="translate(210.31,130.63) rotate(100.34)">
+                        <tspan>o</tspan>
+                      </text>
+                      <text transform="translate(203.77,158.24) rotate(116.45)">
+                        <tspan>t</tspan>
+                      </text>
+                    </g>
+                    <text
+                      x="119"
+                      y="196"
+                      r="5.5"
+                      fill="#57b027"
+                      stroke="none"
+                      font-size="32"
+                      font-family="Arial"
+                      font-style="normal"
+                      font-weight="bold"
+                      transform="rotate(5.5 119 196)"
+                      id="Text2"
+                      layer="2"
+                    >
+                      <tspan dy="9.66" text-anchor="middle">Approved</tspan>
+                    </text>
+                    <g
+                      class="Img_l"
+                      x="126"
+                      y="125"
+                      s="44"
+                      al="7"
+                      transform="translate(71, 70) rotate(7 55 55) scale(0.44) "
+                      load="1"
+                      id="Img6"
+                      layer="6"
+                    >
+                      <title>GitHub Copilot</title>
+                      <g>
+                        <path
+                          d="M205.28,31.36 C219.376,46.24 225.296,66.56 227.792,95.04 C234.417867,95.04 240.5968,96.5093333 244.768,102.192 L252.56,112.752 C254.8,115.792 256,119.424 256,123.2 L256,151.888 C255.992,155.592267 254.1568,159.203467 251.168,161.392 C215.885333,187.222133 172.3496,208 128,208 C78.9344,208 29.8098667,179.726667 4.832,161.392 C1.84330667,159.203467 0.00722666667,155.592267 0,151.888 L0,123.2 C0,119.424 1.2,115.776 3.424,112.736 L11.216,102.192 C15.3891733,96.5349333 21.5953067,95.04 28.208,95.04 C30.704,66.56 36.608,46.24 50.72,31.36 C77.3312,3.1648 112.56728,0.06016 127.552142,0.00088672 L128,0 C142.72,0 178.4,2.88 205.28,31.36 Z M128.016,78.736 C124.976,78.736 121.472,78.912 117.744,79.28 C116.432,84.176 114.496,88.592 111.664,91.408 C100.464,102.608 86.96,104.336 79.728,104.336 C72.9258667,104.336 65.8005333,102.915733 59.984,99.248 C54.4816,101.056 49.1978667,103.6632 48.848,110.16 C48.2621333,122.440533 48.2112,134.709333 48.1602667,146.984 C48.1336,153.144533 48.1093333,159.3064 48.016,165.472 C48.04,169.050667 50.1978667,172.3752 53.456,173.856 C79.936,185.92 104.976,192 128.016,192 C151.024,192 176.064,185.92 202.528,173.856 C205.786133,172.3752 207.9432,169.050667 207.968,165.472 C208.285333,147.0536 208.029867,128.560267 207.152,110.16 L207.168,110.16 C206.826133,103.625867 201.520267,101.061867 196,99.248 C190.179467,102.899733 183.072533,104.336 176.272,104.336 C169.04,104.336 155.552,102.608 144.336,91.408 C141.504,88.592 139.568,84.176 138.256,79.28 C134.853333,78.9338667 131.436,78.7525333 128.016,78.736 Z M101.074933,122.666667 C106.8232,122.666667 111.4832,127.326667 111.4832,133.074933 L111.4832,152.2584 C111.4832,158.006667 106.8232,162.666667 101.074933,162.666667 C95.3266667,162.666667 90.6666667,158.006667 90.6666667,152.2584 L90.6666667,133.074933 C90.6666667,127.326667 95.3266667,122.666667 101.074933,122.666667 Z M154.408267,122.666667 C160.156533,122.666667 164.816533,127.326667 164.816533,133.074933 L164.816533,133.074933 L164.816533,152.2584 C164.816533,158.006667 160.156533,162.666667 154.408267,162.666667 C148.66,162.666667 144,158.006667 144,152.2584 L144,152.2584 L144,133.074933 C144,127.326667 148.66,122.666667 154.408267,122.666667 Z M81.44,28.32 C70.24,29.44 60.8,33.12 56,38.24 C45.6,49.6 47.84,78.4 53.76,84.48 C58.08,88.8 66.24,91.68 75.04,91.68 C81.76,91.68 94.56,90.24 105.12,79.52 C109.76,75.04 112.64,63.84 112.32,52.48 C112,43.36 109.44,35.84 105.6,32.64 C101.44,28.96 92,27.36 81.44,28.32 Z M150.4,32.64 C146.56,35.84 144,43.36 143.68,52.48 C143.36,63.84 146.24,75.04 150.88,79.52 C161.44,90.24 174.24,91.68 180.96,91.68 C189.76,91.68 197.92,88.8 202.24,84.48 C208.16,78.4 210.4,49.6 200,38.24 C195.2,33.12 185.76,29.44 174.56,28.32 C164,27.36 154.56,28.96 150.4,32.64 Z M128,56 C125.44,56 122.4,56.16 119.04,56.48 C119.36,58.24 119.52,60.16 119.68,62.24 C119.68,63.68 119.68,65.12 119.52,66.72 C122.72,66.4 125.44,66.4 128,66.4 C130.559733,66.4 133.28,66.4 136.48,66.72 C136.32,65.12 136.32,63.6802667 136.32,62.2402667 C136.48,60.1602667 136.64,58.24 136.96,56.48 C133.6,56.16 130.56,56 128,56 Z"
+                          fill="#57b027"
+                        ></path>
+                      </g>
+                    </g></svg></span
+              ></span>
+              <li class="fragment" data-fragment-index="7">
+                Use Rust to build your code
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              <span style="text-decoration: line-through; opacity: 0.5"
+                >Possible</span
+              >
+              <span
+                class="fragment"
+                style="
+                  color: rgb(133, 28, 21);
+                  position: absolute;
+                  left: 20%;
+                  text-decoration: overline underline;
+                  transform: rotate(35deg);
+                "
+                >Boring</span
+              >
+              Solutions
+            </h2>
+            <ul
+              data-id="solutions"
+              style="opacity: 0.5; text-decoration: line-through"
+            >
+              <li>Use Typescript</li>
+              <li>Use React</li>
+              <li>Use Rust to build your code</li>
+            </ul>
+            <h3 class="fragment">Let's use Python.</h3>
+          </section>
+        </section>
+
+        <section>
+          <h2>Scrapped solution: Transpile</h2>
+          <ul>
+            <li class="fragment">Subset of the language</li>
+            <li class="fragment">I only know how to use python libs</li>
+            <li class="fragment">I have to extend a horrible build process</li>
+            <li class="fragment">I still end up with JS 😥</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2
+              style="
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                text-transform: none;
+                justify-content: center;
+              "
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg"
+                alt="WASM logo"
+                style="height: 1em"
+              />
+              WebAssembly
+            </h2>
+            <p>Low level primitives for modern browsers</p>
+            <h4 class="fragment">Cool? Cool.</h4>
+          </section>
+          <section data-auto-animate>
+            <div style="transform: scale(0.6)">
+              <div class="r-frame" style="opacity: 0.2"><h3>C / C++</h3></div>
+              <img
+                style="filter: invert(1); opacity: 0.2"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://llvm.org/img/LLVMWyvernSmall.png"
+                  alt="LLVM logo"
+                  style="height: 60px"
+                />
+                <p>LLVM</p>
+              </div>
+              <img
+                style="filter: invert(1); opacity: 0.2"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame" style="opacity: 0.2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg"
+                  alt="WASM logo"
+                  style="height: 60px"
+                />
+                <p>WASM</p>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div style="transform: scale(0.6)">
+              <div class="r-frame"><h3>C / C++</h3></div>
+              <img
+                style="filter: invert(1)"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://llvm.org/img/LLVMWyvernSmall.png"
+                  alt="LLVM logo"
+                  style="height: 60px"
+                />
+                <p>LLVM</p>
+              </div>
+              <img
+                style="filter: invert(1); opacity: 0.2"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame" style="opacity: 0.2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg"
+                  alt="WASM logo"
+                  style="height: 60px"
+                />
+                <p>WASM</p>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div style="transform: scale(0.6)">
+              <div class="r-frame"><h3>C / C++</h3></div>
+              <img
+                style="filter: invert(1)"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://llvm.org/img/LLVMWyvernSmall.png"
+                  alt="LLVM logo"
+                  style="height: 60px"
+                />
+                <p>LLVM</p>
+              </div>
+              <img
+                style="filter: invert(1)"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg"
+                  alt="WASM logo"
+                  style="height: 60px"
+                />
+                <p>WASM</p>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <img
+              src="https://raw.githubusercontent.com/emscripten-core/emscripten/main/media/switch_logo.png"
+              alt="emscripten logo"
+            />
+            <div style="transform: scale(0.4); transform-origin: top">
+              <div class="r-frame"><h3>C / C++</h3></div>
+              <img
+                style="filter: invert(1)"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://llvm.org/img/LLVMWyvernSmall.png"
+                  alt="LLVM logo"
+                  style="height: 60px"
+                />
+                <p>LLVM</p>
+              </div>
+              <img
+                style="filter: invert(1)"
+                height="60"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+              <div class="r-frame">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg"
+                  alt="WASM logo"
+                  style="height: 60px"
+                />
+                <p>WASM</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>And what's written in C?</h2>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+              alt="Python logo"
+              style="height: 200px; background: transparent"
+              class="demo-logo fragment"
+            />
+            <img
+              src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/22/1464966359-mind-blow-gif.gif"
+              alt="mind blown"
+              class="fragment"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            />
+          </section>
+          <section>
+            <h2>Enter: <code>Pyodide</code></h2>
+            <p>An elegant language, for a more... civilized age</p>
+            <ul>
+              <li class="fragment">
+                An actual Python interpreter in the browser
+              </li>
+              <li class="fragment">Includes a bridge into JS realm</li>
+              <li class="fragment">
+                Actually works with
+                <code>PyPi</code>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <iframe
+              src="https://master--warm-bubblegum-300c49.netlify.app/"
+              frameborder="0"
+              width="600"
+              height="500"
+            ></iframe>
+          </section>
+          <section data-auto-animate>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <pre
+              data-id="code-animation"
+              style="width: auto; height: auto"
+            ><code class="hljs language-python" data-trim data-line-numbers>
+				@component
+				def home():
+					counter, set_counter = use_state(0)
+					style = use_style(counter)
+
+					with mui.AppBar(position="static", sx=dict(padding=2)):
+						with mui.Typography(variant="h4", component="div"):
+							text("PyAct Demo")
+
+					with mui.Container():
+						with mui.Typography(variant="h3", sx=style):
+							text(counter)
+						+counter_controller(counter=counter, set_counter=set_counter)
+			</code></pre>
+          </section>
+          <section data-auto-animate>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <p>You can use React hooks</p>
+            <pre
+              data-id="code-animation"
+              style="width: auto; height: auto"
+            ><code class="hljs language-python" data-trim data-line-numbers="2-4">
+				@component
+				def home():
+					counter, set_counter = use_state(0)
+					style = use_style(counter)
+
+					with mui.AppBar(position="static", sx=dict(padding=2)):
+						with mui.Typography(variant="h4", component="div"):
+							text("PyAct Demo")
+
+					with mui.Container():
+						with mui.Typography(variant="h3", sx=style):
+							text(counter)
+						+counter_controller(counter=counter, set_counter=set_counter)
+			</code></pre>
+          </section>
+          <section data-auto-animate>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <p>You can use 3rd part component</p>
+            <pre
+              data-id="code-animation"
+              style="width: auto; height: auto"
+            ><code class="hljs language-python" data-trim data-line-numbers="6-7,10-11">
+				@component
+				def home():
+					counter, set_counter = use_state(0)
+					style = use_style(counter)
+
+					with mui.AppBar(position="static", sx=dict(padding=2)):
+						with mui.Typography(variant="h4", component="div"):
+							text("PyAct Demo")
+
+					with mui.Container():
+						with mui.Typography(variant="h3", sx=style):
+							text(counter)
+						+counter_controller(counter=counter, set_counter=set_counter)
+			</code></pre>
+          </section>
+          <section data-auto-animate>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <p>You can overload operators</p>
+            <pre
+              data-id="code-animation"
+              style="width: auto; height: auto"
+            ><code class="hljs language-python" data-trim data-line-numbers="13">
+				@component
+				def home():
+					counter, set_counter = use_state(0)
+					style = use_style(counter)
+
+					with mui.AppBar(position="static", sx=dict(padding=2)):
+						with mui.Typography(variant="h4", component="div"):
+							text("PyAct Demo")
+
+					with mui.Container():
+						with mui.Typography(variant="h3", sx=style):
+							text(counter)
+						+counter_controller(counter=counter, set_counter=set_counter)
+			</code></pre>
+          </section>
+
+          <section>
+            <h2>Test Case: <code>PyAct</code></h2>
+            <p>You can even manipulate images</p>
+            <pre
+              data-id="code-animation"
+              style="width: auto; height: auto"
+            ><code class="hljs language-python" data-trim data-line-numbers>
+				@cache
+				def shift_hue(hue_delta):
+					def shift(img):
+						img = img.convert("RGBA")
+						alpha = img.getchannel("A")
+						img = img.convert("HSV")
+						data = img.getdata()
+						img.putdata(tuple(
+							(abs(h + hue_delta) % 255, s, v) for h, s, v in data
+						 ))
+						img = img.convert("RGBA")
+						img.putalpha(alpha)
+						return img
+					return shift
+			</code></pre>
+          </section>
+          <section>
+            <h2>Get <code>PyAct</code> now!</h2>
+            <p>
+              <a href="https://github.com/oakfang/pyact" target="_blank"
+                >oakfang/pyact</a
+              >
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <h2>Disclaimer</h2>
+            <p class="r-fit-text">Do not</p>
+          </section>
+          <section data-auto-animate>
+            <h2>Disclaimer</h2>
+            <p class="r-fit-text">use this</p>
+          </section>
+          <section data-auto-animate>
+            <h2>Disclaimer</h2>
+            <p class="r-fit-text">in production</p>
+          </section>
+        </section>
+
+		<section>
+			<h1>Bye.</h1>
+		</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
