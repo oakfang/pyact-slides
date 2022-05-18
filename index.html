@@ -165,10 +165,146 @@
           <section>
             <h2>Why, though?</h2>
             <ul>
-              <li class="fragment">Legacy type system</li>
-              <li class="fragment">Framework fatigue</li>
-              <li class="fragment">Bizarre toolchain</li>
-              <li class="fragment">... etc.</li>
+              <li class="fragment" data-fragment-index="1">
+                Legacy type system
+              </li>
+              <span class="fragment fade-in" data-fragment-index="2"
+                ><span class="fragment fade-out" data-fragment-index="3"
+                  ><p
+                    style="
+                      -webkit-text-stroke: 2px black;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      font-family: monospace;
+                      width: max-content;
+                      background-color: black;
+                    "
+                  >
+                    4 == "4"
+                    <br />
+                    false == 0
+                    <br />
+                    [1, 2, 3] == "1,2,3"
+                    <br />
+                    typeof NaN == "number"
+                  </p></span
+                ></span
+              >
+              <li class="fragment" data-fragment-index="4">
+                Framework fatigue
+              </li>
+              <span class="fragment fade-in" data-fragment-index="5"
+                ><span class="fragment fade-out" data-fragment-index="7">
+                  <img
+                    src="https://cdn-media-1.freecodecamp.org/images/3EHjaj6QO1StPPogrXsM4LhMeuFkFIzIj8Md"
+                    alt="logos"
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                  />
+                  <h1
+                    class="fragment fade-in"
+                    data-fragment-index="6"
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      -webkit-text-stroke: 2px black;
+                    "
+                  >
+                    2019
+                  </h1>
+                </span></span
+              >
+              <li class="fragment" data-fragment-index="8">
+                Bizarre toolchain
+              </li>
+              <style>
+                @keyframes blur {
+                  0% {
+                    filter: blur(0px);
+                  }
+                  100% {
+                    filter: blur(10px);
+                  }
+                }
+                .blurry {
+                  animation: blur 10s normal forwards ease-in;
+                }
+              </style>
+              <span
+                class="fragment fade-in"
+                data-sync-id="blurry"
+                data-fragment-index="9"
+                ><span
+                  class="fragment fade-out"
+                  data-sync-id="blurry"
+                  data-fragment-index="10"
+                  ><div
+                    style="
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                    "
+                  ></div></span
+              ></span>
+              <script>
+                const byId = {};
+                const allSynced = document.querySelectorAll("[data-sync-id]");
+                const callbackMap = new WeakMap();
+                const observer = new MutationObserver((mutationsList) => {
+                  for (const mutation of mutationsList) {
+                    if (
+                      mutation.type === "attributes" &&
+                      mutation.attributeName === "class"
+                    ) {
+                      const element = mutation.target;
+                      callbackMap.get(element)?.();
+                    }
+                  }
+                });
+                const onClassChange = (element, callback) => {
+                  callbackMap.set(element, callback);
+                  observer.observe(element, {
+                    attributes: true,
+                    attributeFilter: ["class"],
+                  });
+                };
+                allSynced.forEach((el) => {
+                  if (!byId[el.dataset.syncId]) {
+                    byId[el.dataset.syncId] = [];
+                  }
+                  byId[el.dataset.syncId].push(el);
+                });
+
+                Object.keys(byId).forEach((syncId) => {
+                  const elements = byId[syncId];
+                  elements.forEach((el) => {
+                    onClassChange(el, () => {
+                      if (el.classList.contains("visible")) {
+                        if (el.classList.contains("fade-in")) {
+                          el.closest("section").classList.add(syncId);
+                        } else {
+                          el.closest("section").classList.remove(syncId);
+                        }
+                      } else if (
+                        !elements.find((el) => el.classList.contains("visible"))
+                      ) {
+                        el.closest("section").classList.remove(syncId);
+                      }
+                    });
+                  });
+                });
+              </script>
+              <li class="fragment" data-fragment-index="10 ">... etc.</li>
             </ul>
           </section>
         </section>
